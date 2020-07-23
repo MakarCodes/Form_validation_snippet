@@ -1,0 +1,126 @@
+form {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 600px;
+  width: 50%;
+  margin: 50px auto;
+  background-color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 13px 0px;
+  padding: 30px;
+
+  .input-group {
+    margin-bottom: 6px;
+    position: relative;
+    .form-label {
+      display: block;
+      text-transform: capitalize;
+      position: relative;
+      margin: 0 0 4px 0;
+      padding: 0px;
+      font-weight: 700;
+    }
+    .label-required {
+      &::before {
+        content: '*';
+        position: absolute;
+        left: -10px;
+        top: -2px;
+        font-size: 24px;
+        color: #802020;
+      }
+    }
+    .form-input {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border: 1px solid #bebebe;
+      padding: 8px;
+      margin: 0;
+      transition: all 0.3s ease-in-out;
+      outline: none;
+      &:focus {
+        box-shadow: 0 0 8px #88d5e9;
+        border: 1px solid #88d5e9;
+      }
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    .errorInput {
+      box-shadow: 0 0 8px #802020;
+      border: 1px solid #802020;
+    }
+    .errorField {
+      color: #802020;
+      font-size: 14px;
+      text-align: right;
+      margin: 4px 0;
+    }
+    .tooltip {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      background-color: #ccc;
+      top: 32px;
+      right: 2%;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: help;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover::before {
+        content: 'Dlaczego muszę podać nr telefonu? Podany nr zostanie automatycznie autoryzowany do kontaktu z naszym biurem obsługi klienta. Na podany numer może również kontaktować się firma kurierska w celu umówienia dogodnego dla Państwa terminu odbioru przesyłki';
+        position: absolute;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 290px;
+        font-size: 14px;
+        color: rgb(33, 33, 33);
+        height: 155px;
+        background-color: #ccc;
+        bottom: 112%;
+        right: -50px;
+        border-radius: 10px;
+        padding: 5px;
+        border: solid 1px black;
+      }
+    }
+  }
+
+  .submit-form_button {
+    margin-top: 8px;
+    display: block;
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: white;
+    background: #802020;
+    background: linear-gradient(90deg, #802020, #c33);
+    outline: none;
+    border: none;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .submit-form_button--clicked {
+    animation: buttonAnimation 0.3s linear;
+  }
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
