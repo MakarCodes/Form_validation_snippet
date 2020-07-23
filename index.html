@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm" method="post" autocomplete="off">
+      <div class="input-group">
+        <label for="username" class="form-label label-required">Name</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          data-validation_type="username"
+          required
+          placeholder="Your name..."
+          class="form-input"
+        />
+      </div>
+      <div class="input-group">
+        <label for="surname" class="form-label label-required">Surname</label>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          data-validation_type="surname"
+          required
+          placeholder="Your surname..."
+          class="form-input"
+        />
+      </div>
+      <div class="input-group">
+        <label for="phone_number" class="form-label label-required"
+          >Phone number</label
+        >
+        <input
+          type="tel"
+          id="phone_number"
+          name="phone_number"
+          data-validation_type="phone_number"
+          required
+          placeholder="Your phone number..."
+          class="form-input"
+        />
+        <span class="tooltip">?</span>
+      </div>
+      <div class="input-group">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          data-validation_type="email"
+          placeholder="Your email..."
+          class="form-input"
+        />
+      </div>
+      <div class="input-group">
+        <label for="adress" class="form-label">Adress</label>
+        <input
+          type="text"
+          id="adress"
+          name="adress"
+          data-validation_type="adress"
+          placeholder="Your adress..."
+          class="form-input"
+        />
+      </div>
+      <button type="submit" class="submit-form_button">Submit</button>
+    </form>
+    <script src="form.js"></script>
+  </body>
+</html>
